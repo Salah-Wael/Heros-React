@@ -1,0 +1,78 @@
+/* lEAGUE SPARTAN IMPORTED FROM GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+/* TAILWINDCSS DIRECTIVES */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS RULE SET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+    to top,
+    #82e9ef,
+    #64a8bb,
+    #4b6c80,
+    #2e3642,
+    #040406
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.transition-width {
+  transition: width 0.3s ease-in-out;
+}
+
+/* TAILWINDCSS ADJUSTED UTTILS */
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 3xl:px-5;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* BUTTON STYLES */
+
+/* Tailwind CSS and custom CSS for Navbar animations */
+
+/* Hover effect for the links */
+.link-hover {
+  transition: color 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  background-size: 200% 200%;
+}
+.link-hover:hover {
+  color: #ffffff;
+  background-position: right center;
+}
+
+/* Logo animation */
+.logo-animation {
+  transition: transform 0.3s ease-in-out;
+}
+.logo-animation:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.gradiant {
+  @apply text-transparent bg-gradient-to-r from-cyan to-light-violet bg-clip-text;
+}
